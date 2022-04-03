@@ -1,0 +1,16 @@
+package com.Janu;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+	    System.out.println("Calculating simple interest");
+	    Scanner sc = new Scanner(System.in);
+	   System.out.println("Enter values of principal,time and Interest rate");
+	   double principal=sc.nextDouble();
+	   double time=sc.nextDouble();
+	   double rate=sc.nextDouble();
+	   double simple_interest=(principal*time*rate)/100;
+	   System.out.println("calculating simple interest is:"+simple_interest);
+
+    }
+}

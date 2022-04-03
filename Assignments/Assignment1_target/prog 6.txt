@@ -1,0 +1,19 @@
+package com.Janu;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class Main {
+
+    public static void main(String[] args) {
+	    System.out.println("separating whole number and fraction value");
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		double num=sc.nextDouble();
+		String regex="^[+-]?([0-9]*)\\.([0-9]*)$";
+		Pattern pat=Pattern.compile(regex);
+		Matcher matcher=pat.matcher(String.valueOf(num));
+		System.out.println(matcher.find());
+		System.out.println("whole number is:"+matcher.group(1));
+		System.out.println("fraction value is :"+matcher.group(2));
+    }
+}

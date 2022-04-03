@@ -1,0 +1,13 @@
+package com.Janu;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to calculate volume of cylinder");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the radius and height of cylinder");
+		int radius=sc.nextInt();
+		int height=sc.nextInt();
+		double volume=3.14*(radius*radius)*height;
+		System.out.println("volume of cylinder is:"+volume);
+	}
+}

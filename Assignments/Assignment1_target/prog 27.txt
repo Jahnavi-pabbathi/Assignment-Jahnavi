@@ -1,0 +1,22 @@
+package com.Janu;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to check armstrong number for 3 digit number");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int num=sc.nextInt();
+		int sum=0;
+		int store=num;
+		while(store!=0){
+			int rem=store%10;
+			sum+=(rem*rem*rem);
+			store/=10;
+		}
+		if(sum==num)
+			System.out.println("Given number is armstrong");
+		else
+			System.out.println("Number is not armstrong");
+	}
+}

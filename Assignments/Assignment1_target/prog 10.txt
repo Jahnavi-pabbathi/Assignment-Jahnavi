@@ -1,0 +1,20 @@
+package com.Janu;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to reverse the number");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int num = sc.nextInt();
+		int length = String.valueOf(num).length();
+		int[] arr = new int[length];
+		for (int i = length - 1; i >= 0; i--){
+			arr[i] = num % 10;
+			num /= 10;
+		}
+    	String[] in_words = {"Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
+    	for(int i=0;i<length;i++)
+    		System.out.print(in_words[arr[i]]+" ");
+
+    }
+}

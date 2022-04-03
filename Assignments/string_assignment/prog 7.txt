@@ -1,0 +1,18 @@
+package com.Janu;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("replace occurrences of given character in string");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the string");
+		String str=sc.nextLine();
+		String regex="([1-9][0-9]*)-([1-9][0-9]*)";
+		Pattern pat=Pattern.compile(regex);
+		Matcher matcher= pat.matcher(str);
+		matcher.find();
+		str=str.replaceAll("([1-9][0-9]*)-([1-9][0-9]*)",matcher.group(1)+matcher.group(2));
+		System.out.println("String after replacement is "+str);
+	}
+}

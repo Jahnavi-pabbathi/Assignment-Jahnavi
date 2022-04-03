@@ -1,0 +1,21 @@
+package com.Janu;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to reverse a string");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the  string");
+		String str=sc.next();
+		int index=0;
+    
+       char[] char_array = new char[str.length()];
+       for(int ind=str.length()-1;ind>=0;ind--){
+       		char_array[ind]= str.charAt(index);
+       		index++;
+	   }
+       String s=new String(char_array);
+       System.out.println(s);
+
+    }
+}

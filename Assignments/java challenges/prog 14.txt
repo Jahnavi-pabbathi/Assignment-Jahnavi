@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to check if string contains another string");
+		Scanner sc = new Scanner(System.in);
+		int count=0;
+		System.out.println("Enter 2 strings");
+		String str1=sc.nextLine();
+		String str2=sc.nextLine();
+		if(str1.contains(str2))
+			System.out.println("contains the string");
+		else
+			System.out.println("Does not contain the string");
+	}
+}

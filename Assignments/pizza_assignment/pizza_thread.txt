@@ -1,0 +1,100 @@
+main
+
+package com.Janu;
+import java.util.Scanner;
+public class Main  {
+       public static void main(String[] args) {
+           Scanner scan= new Scanner(System.in);
+           while(true) {
+               System.out.println("Are there any more customers?");
+               String ans = scan.next();
+               if (ans.equals("yes")) {
+                   Main obj = new Main();
+                   obj.begin();
+               } else break;
+           }
+       }
+       public void begin(){
+           Scanner sc = new Scanner(System.in);
+           Pizza p1=new Pizza("pizza1",60,400);
+           Pizza p2=new Pizza("pizza2",50,300);
+           Pizza p3=new Pizza("pizza3",70,600);
+           System.out.println("available pizzas:pizza1,pizza2,pizza2....choose a pizza");
+           Pizza[] avpiz= new Pizza[] {p1,p2,p3};
+           int choice=sc.nextInt();
+           switch(choice){
+               case 1 : Chef chef1=new Chef(avpiz[choice-1]);
+                        chef1.start();
+                        break;
+               case 2 : Chef chef2=new Chef(avpiz[choice-1]);
+                        chef2.start();
+                        break;
+               case 3 : Chef chef3=new Chef(avpiz[choice-1]);
+                        chef3.start();
+                        break;
+           }
+       }
+    public static void pizzaCooked(Pizza pizza){
+        System.out.println(pizza.getName()+"is ready");
+    }
+}
+
+
+
+
+
+chef
+
+package com.Janu;
+
+public class Chef extends Thread{
+    Pizza pizza;
+
+
+        public Chef(Pizza pizza) {
+            super();
+            this.pizza = pizza;
+        }
+        public void run () {
+            try {
+                Thread.sleep(pizza.getCooking() );
+            }catch(InterruptedException ex){
+                System.out.println(ex);
+            }
+            Main.pizzaCooked(pizza);
+        }
+}
+
+
+pizza
+
+package com.Janu;
+public class Pizza {
+    String name;
+    double cost;
+    int cooking;
+    public Pizza(String name,double cost, int cooking){
+        this.name=name;
+        this.cost=cost;
+        this.cooking=cooking;
+
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name= name;
+    }
+    public double getCost(){
+        return cost;
+    }
+    public void setCost(double cost){
+        this.cost= cost;
+    }
+    public int getCooking(){
+        return cooking;
+    }
+    public void setCooking(int cooking){
+        this.cooking= cooking;
+    }
+}

@@ -1,0 +1,18 @@
+package com.Janu;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to display a sequence");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the range");
+		int num = sc.nextInt();
+		int mul=4,sum=1;
+		System.out.print(sum+" ");
+		for(int i=1;i<=num;i++) {
+			mul=4*i;
+			if(mul%3==0)	continue;
+			sum+=mul;
+			System.out.print(sum+" ");
+		}
+    }
+}

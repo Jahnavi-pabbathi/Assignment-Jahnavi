@@ -1,0 +1,26 @@
+package com.Janu;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("Linear search");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int len=sc.nextInt();
+		int flag=0;
+		int[] arr = new int[len];
+		System.out.println("Enter the array elements");
+		for(int ind=0;ind<len;ind++)
+			arr[ind]=sc.nextInt();
+		System.out.println("Enter the element to search");
+		int search = sc.nextInt();
+		for(int ind=0;ind<len;ind++) {
+			if (arr[ind] == search) {
+				System.out.println("Element found");
+				flag = 1;
+			}
+		}
+		if(flag==0)
+				System.out.println("Element not found");
+	}
+}

@@ -1,0 +1,23 @@
+package com.Janu;
+import java.util.*;
+import java.io.FileOutputStream;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to copy the file");
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter source file name :");  
+  		String source_file = sc.nextLine();  
+ 		 System.out.println("Enter destination file name :");  
+  		String dest_file = sc.nextLine();  
+  		FileReader f_in = new FileReader(source_file);  
+  		FileWriter f_out = new FileWriter(dest_file, true);  
+  		int c;  
+  		while ((c = fi_n.read()) != -1)  
+   			f_out.write(c);  
+ 		  
+  		System.out.println("Copy finish");  
+  		f_in.close();  
+  		f_out.close();
+								
+	}
+}

@@ -1,0 +1,11 @@
+package com.Janu;
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to replace");
+		Scanner sc = new Scanner(System.in);
+		String str=sc.nextLine();
+		str.replace('a','$');
+		System.out.println("replaced string is:"+str);
+	}
+}

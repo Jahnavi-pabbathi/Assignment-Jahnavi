@@ -1,0 +1,24 @@
+package com.Janu;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to check if a string is a palindrome");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the  string");
+		String str=sc.next();
+		if(ispal(str))
+			System.out.println("Given string is palindrome");
+		else
+			System.out.println("Given string is not a palindrome");
+    }
+    public static boolean ispal(String str){
+		int begin=0,end=str.length()-1;
+		while(begin<=end){
+			if(str.charAt(begin)!=str.charAt(end))
+				return false;
+			begin++;end--;
+		}
+		return true;
+	}
+}

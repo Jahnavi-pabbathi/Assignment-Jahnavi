@@ -1,0 +1,20 @@
+package com.Janu;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args){
+		System.out.println("finding odd_sum and even_sum");
+		Scanner sc = new Scanner(System.in);
+    	System.out.println("Enter the range ");
+    	int num=sc.nextInt();
+    	int odd_sum=0,even_sum=0;
+    	while(num>=0){
+    		if(num%2==0)
+				even_sum+=num;
+    		else
+    			odd_sum+=num;
+    		num--;
+		}
+		System.out.println("sum of odd numbers in the range is:"+odd_sum);
+		System.out.println("sum of even numbers in the range is:"+even_sum);
+    }
+}

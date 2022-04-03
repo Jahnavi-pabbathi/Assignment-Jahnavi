@@ -1,0 +1,22 @@
+package com.Janu;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to convert binary to decimal");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the binary number");
+		String bin_num = sc.next();
+		System.out.println("binary number is:"+bin_to_dec(bin_num.toCharArray()));
+    }
+    public static String bin_to_dec(char[] char_array){
+		int length= char_array.length;
+		double sum=0;
+		double ind=0;
+		for(int i=length-1;i>=0;i--){
+			sum=sum+((char_array[i]-'0')*Math.pow(2,ind));
+			ind++;
+		}
+		return String.valueOf(sum);
+	}
+}

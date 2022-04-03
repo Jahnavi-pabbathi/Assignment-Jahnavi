@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to print duplicates in a string");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the string");
+		String str= sc.nextLine();
+		int[] char_count = new int[52];
+		for(int i=0;i<str.length();i++)
+			char_count[str.charAt(i)-'A']++;
+		for(int i=0;i<52;i++){
+			if(char_count[i]>1) {
+				char ch = (char) ((int) 'A' + i);
+				System.out.print(ch + " ");
+			}
+		}
+
+	}

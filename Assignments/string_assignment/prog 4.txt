@@ -1,0 +1,16 @@
+package com.Janu;
+import java.util.*;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to check if a string is empty");
+		System.out.println("Enter a string:");
+		Scanner sc = new Scanner(System.in);
+		String str= sc.nextLine();
+		if(str.length()==0)
+			System.out.println("String is empty");
+		else
+			System.out.println("String is not empty");
+	}
+}

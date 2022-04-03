@@ -1,0 +1,20 @@
+package com.Janu;
+import java.util.*;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to check if a string has only digits");
+		System.out.println("Enter a string:");
+		Scanner sc = new Scanner(System.in);
+		String str= sc.nextLine();
+		String regex="^(%d)+$";
+                                     Pattern pat = Pattern.compile(regex);
+		Matcher mat =pat.mat(str);
+		boolean found=mat.find();
+		if(found)
+			System.out.println("It contains only digits");
+		else
+			System.out.println("It does not contain only digits");
+	}
+}

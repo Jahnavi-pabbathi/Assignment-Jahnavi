@@ -1,0 +1,11 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to concatenate two strings");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter 2 strings");
+		String str1=sc.nextLine();
+		String str2=sc.nextLine();
+		System.out.println("string after concatenation"+(str1+str2));
+	}
+}

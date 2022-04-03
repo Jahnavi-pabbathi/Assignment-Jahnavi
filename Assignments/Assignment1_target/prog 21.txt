@@ -1,0 +1,22 @@
+package com.Janu;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to print  sequence");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the  number");
+		int range=sc.nextInt();
+		double num=1;
+		System.out.print((int)num+" ");
+		for(int ind=1;ind<=range;ind++){
+			num=num+(Math.pow(ind,2));
+			if(ind%2==0)
+				System.out.print((int)num+" ");
+			else
+				System.out.print(-(int)num+" ");
+		}
+
+    }
+
+}

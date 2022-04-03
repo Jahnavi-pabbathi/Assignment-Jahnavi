@@ -1,0 +1,17 @@
+package com.Janu;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to display a sequence");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the range");
+		int num = sc.nextInt();
+		int mul=1;
+		for(int i=1;i<=num;i++) {
+			for(int j=0;j<i;j++)
+				 mul*=i;
+			System.out.print(mul + " ");
+			mul=1;
+		}
+    }
+}

@@ -1,0 +1,28 @@
+package com.Janu;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to convert decimal to binary");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the decimal number");
+		int dec_num = sc.nextInt();
+		int[] res= dec_to_bin(dec_num);
+		System.out.println("binary number is:");
+		for(int i=0;i<res.length;i++)
+			System.out.print(res[i]);
+    }
+    public static int[] dec_to_bin(int number){
+		int[] str= new int[number/2+1];
+		int ind=0;
+		while(number!=0){
+			str[ind] = number%2;
+			number/=2;
+			ind++;
+		}
+		int index=0;
+		int[] ans= new int[ind];
+		for(int i=ind-1;i>=0;i--)
+			ans[i]=str[index++];
+		return ans;
+	}
+}

@@ -1,0 +1,15 @@
+package com.Janu;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to find factorial of a given number");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int number = sc.nextInt();
+		System.out.println(factorial(number));
+    }
+    public static int factorial(int number){
+		if(number==1)	return 1;
+		return number*factorial(number-1);
+	}
+}

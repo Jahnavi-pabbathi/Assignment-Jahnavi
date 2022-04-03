@@ -1,0 +1,28 @@
+ public class Main{
+ 
+       public static void main(String[] args)
+    {
+        System.out.println("Enter a number");
+       Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+ 
+        if (isPerfect_Sqr(num))
+            System.out.print("Number is perfect square");
+        else
+            System.out.print("Number is not perfect square");
+    }
+
+
+     public static boolean isPerfect_Sqr(int num)
+    {
+        if (num >= 0) {
+           
+            int sr = (int)Math.sqrt(num);         
+            if ((sr * sr) == num)
+	return true;
+        }
+        return false;
+    }
+ 
+
+}

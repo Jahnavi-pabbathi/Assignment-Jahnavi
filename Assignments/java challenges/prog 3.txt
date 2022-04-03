@@ -1,0 +1,15 @@
+package com.Janu;
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("program to display discount amount and selling price");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the cost");
+		double cost=sc.nextDouble();
+		System.out.println("Enter discount percentage");
+		double disc_per=sc.nextDouble();
+		double disc_amt=(disc_per/100)*cost;
+		double sell_price=cost-disc_amt;
+		System.out.println("Discount amount is:"+disc_amt+" "+"selling price is:"+sell_price);
+	}
+}
